@@ -1,0 +1,22 @@
+{
+    "name": "restaurant",
+    "version": "1.0.0",
+    "description": "restaurant for portfolio",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dantegituser/restaurant.git"
+    },
+    "author": "dante martinez",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dantegituser/restaurant/issues"
+    },
+    "homepage": "https://github.com/dantegituser/restaurant#readme",
+    "devDependencies": {
+        "node-sass": "^4.14.1"
+    }
+}
