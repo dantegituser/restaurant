@@ -35,19 +35,12 @@ export class Slider {
             }
         });
 
-        // hide arrow down
-        this.tl.set(this.elementos.NAV_PREV, { autoAlpha: 0.2 });
-
     }
 
-    goToNextSlide(slideOut, slideIn) {
-
-        // console.log('slidein', slideIn);
+    goToNextSlide(slideOut, slideIn, ultimo) {
         let tl = new TimelineMax();
         let slideOutH2 = slideOut.querySelector('h2');
         let slideInH2 = slideIn.querySelector('h2');
-
-
 
         // animate h2 y slide
         tl.set(slideIn, {
@@ -73,16 +66,83 @@ export class Slider {
 
     }
     addEventListeners() {
-        this.elementos.NAV_NEXT.addEventListener('click', (e) => {
-            e.preventDefault();
-            let slideOut = document.querySelector('.dish-item-cont.active');
-            let slideIn = document.querySelector('.dish-item-cont.active').nextElementSibling;
+            this.elementos.NAV_NEXT.addEventListener('click', (e) => {
+                e.preventDefault();
+                let slideOut = document.querySelector('.dish-item-cont.active');
+                let slideIn, slideInmas, ultimo;
+                //let slideInmas = document.querySelector('.dish-item-cont.active').nextElementSibling.nextElementSibling;
 
-            if (slideIn) {
-                this.goToNextSlide(slideOut, slideIn);
-            }
-        });
+                if (document.querySelector('.dish-item-cont.active').nextElementSibling) {
+                    slideIn = document.querySelector('.dish-item-cont.active').nextElementSibling;
+                } else {
+                    return;
+                }
+                if (document.querySelector('.dish-item-cont.active').nextElementSibling.nextElementSibling) {
+                    slideInmas = document.querySelector('.dish-item-cont.active').nextElementSibling.nextElementSibling;
+                } else {
+                    slideInmas = false;
+                }
+
+                if (slideIn && slideInmas !== false) {
+                    this.goToNextSlide(slideOut, slideIn, ultimo = false);
+                } else if (slideIn && slideInmas === false) {
+                    this.goToNextSlide(slideOut, slideIn, ultimo = true);
+                }
+
+
+
+            });
+
+            this.elementos.NAV_PREV.addEventListener('click', (e) => {
+                e.preventDefault();
+                let slideOut = document.querySelector('.dish-item-cont.active');
+                let slideIn, slideInmas, ultimo;
+                //let slideInmas = document.querySelector('.dish-item-cont.active').nextElementSibling.nextElementSibling;
+
+                if (document.querySelector('.dish-item-cont.active').previousElementSibling) {
+                    slideIn = document.querySelector('.dish-item-cont.active').previousElementSibling;
+                } else {
+                    return;
+                }
+                if (document.querySelector('.dish-item-cont.active').previousElementSibling.previousElementSibling) {
+                    slideInmas = document.querySelector('.dish-item-cont.active').previousElementSibling.previousElementSibling;
+                } else {
+                    slideInmas = false;
+                }
+
+                if (slideIn && slideInmas !== false) {
+                    this.goToPrevSlide(slideOut, slideIn, ultimo = false);
+                } else if (slideIn && slideInmas === false) {
+                    this.goToPrevSlide(slideOut, slideIn, ultimo = true);
+                }
+
+            });
+        }
+        // previous slide
+    goToPrevSlide(slideOut, slideIn, ultimo) {
+        let tl = new TimelineMax();
+        let slideOutH2 = slideOut.querySelector('h2');
+        let slideInH2 = slideIn.querySelector('h2');
+
+
+
+        // animate h2 y slide
+        tl.set(slideIn, {
+                y: '-100%',
+                autoAlpha: 1,
+                onComplete: function() {
+                    this.targets().forEach(elem => elem.classList.add("active"));
+                }
+            })
+            .set(slideOut, {
+                onComplete: function() {
+                    this.targets().forEach(elem => elem.classList.remove("active"));
+                }
+            })
+            .to(slideOutH2, { duration: 1, y: '+=20px', autoAlpha: 0, ease: Power3.easeInOut }, 0)
+            .to(slideOut, { duration: 1, y: '100%', ease: Power3.easeInOut }, 0)
+            .to(slideIn, { duration: 1, y: '+=100%', ease: Power3.easeInOut }, 0)
+            .fromTo(slideInH2, 1, { y: '-=20px', autoAlpha: 0 }, { autoAlpha: 1, y: '0', ease: Power1.easeInOut }, 0.3);
     }
-
 
 }
