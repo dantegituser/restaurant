@@ -208,3 +208,76 @@
         }
     }
 }
+
+#container-top.home .home-parallax {
+    background-color: cadetblue;
+}
+
+#container-top.home .home-parallax .triggerScroll {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .item-title {
+        font-family: $fuente-amano;
+        color: white;
+        font-size: 6rem;
+        position: absolute;
+        &-breakfast {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .item-scroll {
+        &-cafe {
+            max-width: 400px;
+        }
+        &-desayuno {
+            max-width: 450px;
+        }
+        &-camaron {
+            max-width: 200px;
+        }
+        &-cuchara {
+            max-width: 50px;
+        }
+        &-helado {
+            max-width: 500px;
+        }
+        &-helado2 {
+            max-width: 350px;
+        }
+        &-hojas {
+            max-width: 200px;
+        }
+        &-limon1 {
+            max-width: 150px;
+        }
+        &-limon2 {
+            max-width: 150px;
+        }
+        &-sushi {
+            max-width: 700px;
+        }
+        &-tabla {
+            max-width: 350px;
+        }
+        &-tenedor {
+            max-width: 50px;
+        }
+        &-cucharada {
+            max-width: 200px;
+        }
+        &-granos {
+            max-width: 150px;
+        }
+        &-jitomates {
+            max-width: 300px;
+        }
+        &-fuerte {
+            max-width: 600px;
+        }
+    }
+    >div img {
+        max-width: 100%;
+    }
+}

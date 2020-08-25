@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 // COLOR VARIABLES
 $color-primary: #c69963;
 $color-secondary: #101d2c;
@@ -17,6 +18,8 @@ $fuente-display: 'Passion One',
 cursive;
 $fuente-slogans: 'Arvo',
 serif;
+$fuente-amano: 'Leckerli One',
+cursive;
 // responsive breakpoints
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; //1000px

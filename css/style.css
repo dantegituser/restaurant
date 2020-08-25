@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 *,
 *::before,
 *::after {
@@ -196,3 +197,53 @@ body {
       font-weight: bold;
       font-size: 3rem;
       text-decoration: none; }
+
+#container-top.home .home-parallax {
+  background-color: cadetblue; }
+
+#container-top.home .home-parallax .triggerScroll {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+  #container-top.home .home-parallax .triggerScroll .item-title {
+    font-family: "Leckerli One", cursive;
+    color: white;
+    font-size: 6rem;
+    position: absolute; }
+    #container-top.home .home-parallax .triggerScroll .item-title-breakfast {
+      opacity: 0;
+      visibility: hidden; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-cafe {
+    max-width: 400px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-desayuno {
+    max-width: 450px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-camaron {
+    max-width: 200px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-cuchara {
+    max-width: 50px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-helado {
+    max-width: 500px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-helado2 {
+    max-width: 350px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-hojas {
+    max-width: 200px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-limon1 {
+    max-width: 150px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-limon2 {
+    max-width: 150px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-sushi {
+    max-width: 700px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-tabla {
+    max-width: 350px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-tenedor {
+    max-width: 50px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-cucharada {
+    max-width: 200px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-granos {
+    max-width: 150px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-jitomates {
+    max-width: 300px; }
+  #container-top.home .home-parallax .triggerScroll .item-scroll-fuerte {
+    max-width: 600px; }
+  #container-top.home .home-parallax .triggerScroll > div img {
+    max-width: 100%; }
