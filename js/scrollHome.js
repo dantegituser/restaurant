@@ -49,12 +49,12 @@ export class ScrollHome {
                 triggerElement: '.home-parallax',
                 triggerHook: 1
             })
-            .addIndicators({
-                name: 'fade-scene',
-                colorTrigger: 'black',
-                indent: 50,
-                colorStart: '#75c695'
-            })
+            // .addIndicators({
+            //     name: 'fade-scene',
+            //     colorTrigger: 'black',
+            //     indent: 50,
+            //     colorStart: '#75c695'
+            // })
             .setTween(tl)
             //.setPin('.triggerScroll')
             .addTo(this.controller); // assign the scene to the controller

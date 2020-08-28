@@ -1,9 +1,22 @@
+:root {
+    --width-transition: 0;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+}
+
+:link,
+ :visited,
+ :active,
+ :focus {
+    outline: none;
+    text-decoration: none;
+    border: none;
 }
 
 html {
@@ -17,7 +30,192 @@ body {
     font-weight: 300;
     line-height: 1.6;
 }
-.small-container{
+
+.small-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+footer {
+    background-color: #000000;
+    .footer-content {
+        color: #ffffff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 3rem 0;
+        .footer-left {
+            flex: 0 1 60%;
+            display: flex;
+            flex-direction: column;
+            h3 {
+                margin-bottom: 2rem;
+                font-family: $fuente-narrow;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    margin-bottom: 1rem;
+                    font-size: .8em;
+                }
+            }
+            ul.inline-icons li {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+        .footer-right {
+            flex: 0 1 24%;
+        }
+    }
+}
+
+footer .footer-left .menu-left-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &>div {
+        width: 30%;
+        max-width: 30%;
+    }
+}
+
+footer .footer-right {
+    h3 {
+        margin-bottom: 2rem;
+        font-family: $fuente-narrow;
+    }
+    label {
+        width: 100%;
+        display: block;
+        font-size: .8em;
+    }
+    input {
+        background: none;
+        border: none;
+        outline: none;
+        padding: 3px 0;
+        border-bottom: 1px solid #ffffff;
+        color: white;
+    }
+    button {
+        background-color: #aaaaaa;
+        color: white;
+        padding: 4px 14px;
+        margin-top: 2rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+#wrapper-full {
+    position: relative;
+}
+
+#menu-full {
+    background: linear-gradient(to left, white 50%, rgba(0, 0, 0, 0) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+    //display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    .menu-full-left {
+        flex: 1 1 45%;
+        height: 100%;
+        position: relative;
+        // &::before {
+        //     display: block;
+        //     content: '';
+        //     width: 0;
+        //     height: 100%;
+        //     background-color: #e2ded9;
+        // }
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 8888;
+            li {
+                font-size: 6rem;
+                font-family: $fuente-slogans;
+                color: #f0eeec;
+                cursor: pointer;
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+        .left-width {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #e2ded9;
+            z-index: 888;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .menu-full-right {
+        flex: 1 1 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .menu-img-container {
+            max-width: 300px;
+            //width: 60%;
+            max-height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            img {
+                width: 500px;
+                height: 600px;
+                object-position: 50% 50%;
+                object-fit: fill;
+            }
+        }
+        .close-menu {
+            align-self: flex-end;
+            margin-right: 3rem;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .close-menu i {
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+}
+
+#wrapper-full #menu-link-open {
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
+    z-index: 9999;
+    cursor: pointer;
+    i {
+        font-size: 3rem;
+    }
 }

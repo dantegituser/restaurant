@@ -1,9 +1,18 @@
 import { Slider } from './sliderHome.js';
-import {ScrollHome} from './scrollHome.js';
+import { ScrollHome } from './scrollHome.js';
+import { Menu } from './menu.js';
+document.addEventListener('DOMContentLoaded', iniciarAplicacion);
 
-const slider = new Slider();
-slider.cargarElementos();
+function iniciarAplicacion() {
 
-// scrollmagic
-const sm = new ScrollHome();
+    console.log('aplicacoine iniciada');
+    const slider = new Slider();
+    slider.cargarElementos();
 
+    // scrollmagic
+    const sm = new ScrollHome();
+
+    // menu
+
+    const menu = new Menu();
+}

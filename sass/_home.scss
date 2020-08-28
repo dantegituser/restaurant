@@ -45,6 +45,7 @@
 }
 
 #container-top.home .home-slider {
+    overflow: hidden;
     position: relative;
     .dishes-container {
         position: relative;
@@ -279,5 +280,21 @@
     }
     >div img {
         max-width: 100%;
+    }
+}
+
+#container-top.home .parallax-dessert {
+    padding: 3rem 0;
+    background-image: url(../img/bg-dessert.png);
+    background-position: 110% 120%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    .text-dessert {
+        width: 30%;
+        margin-left: 10%;
+        padding: 3rem 0;
     }
 }
