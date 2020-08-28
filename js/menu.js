@@ -15,6 +15,10 @@ export class Menu {
         this.MENU_LISTENERS.menuRightImgCont = document.querySelector('.menu-full-right .menu-img-container');
         this.MENU_LISTENERS.menuRightCloseBtn = document.querySelector('.menu-full-right .close-menu');
         this.MENU_LISTENERS.menuOpenBtn = document.querySelector('#menu-link-open');
+        // menu acordeon listeners
+        this.MENU_LISTENERS.arrayImagenes = document.querySelectorAll('.menu-img-container img');
+        this.MENU_LISTENERS.primeraImagen = document.querySelector('.menu-img-container img');
+        this.MENU_LISTENERS.arrayLinks = document.querySelectorAll('.menu-full-left ul li');
 
         //timeline
         this.tlMenu.to(this.MENU_LISTENERS.menuContainer, { duration: 0.5, autoAlpha: 1, display: 'flex' })
@@ -37,11 +41,36 @@ export class Menu {
 
     abrirMenu() {
         this.tlMenu.play(0);
+        this.iniciarAcordeon();
 
     }
 
     cerrarMenu() {
         this.tlMenu.reverse(0);
+    }
+
+    iniciarAcordeon() {
+        //poner la imagen 1 en posicion
+        gsap.set(this.MENU_LISTENERS.primeraImagen, { x: '0%' });
+        // setear los event listeners
+        let activo = [];
+        this.MENU_LISTENERS.arrayLinks.forEach((elemento, index) => {
+            activo.push(elemento.getAttribute('data-id'));
+            elemento.addEventListener('mouseover', () => {
+                this.cambiarAcordeon(activo[index]);
+            });
+        });
+    }
+
+    cambiarAcordeon(id) {
+        // poner todos invisibles
+        let arrayImgs = this.MENU_LISTENERS.arrayImagenes;
+        arrayImgs.forEach((elemento) => {
+            gsap.to(elemento, { duration: 1, x: '100%' });
+        });
+
+        // posicionar la correecta
+        gsap.to(arrayImgs[id], { duration: 1, x: 0 });
     }
 
 

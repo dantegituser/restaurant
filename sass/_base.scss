@@ -157,8 +157,12 @@ footer .footer-right {
                 font-family: $fuente-slogans;
                 color: #f0eeec;
                 cursor: pointer;
-                &:hover {
-                    color: #ffffff;
+                a {
+                    text-decoration: none;
+                    color: #f0eeec;
+                    &:hover {
+                        color: #ffffff;
+                    }
                 }
             }
         }
@@ -183,17 +187,22 @@ footer .footer-right {
         justify-content: center;
         .menu-img-container {
             max-width: 300px;
-            //width: 60%;
             max-height: 500px;
+            width: 300px;
+            height: 500px;
             margin: 0 auto;
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
+            position: relative;
             img {
-                width: 500px;
+                //width: 500px;
                 height: 600px;
                 object-position: 50% 50%;
                 object-fit: fill;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
         .close-menu {
@@ -205,6 +214,7 @@ footer .footer-right {
         .close-menu i {
             font-size: 3rem;
             cursor: pointer;
+            color: black;
         }
     }
 }
@@ -217,5 +227,6 @@ footer .footer-right {
     cursor: pointer;
     i {
         font-size: 3rem;
+        color: yellow;
     }
 }

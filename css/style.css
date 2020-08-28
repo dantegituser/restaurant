@@ -135,8 +135,11 @@ footer .footer-right button {
         font-family: "Arvo", serif;
         color: #f0eeec;
         cursor: pointer; }
-        #menu-full .menu-full-left ul li:hover {
-          color: #ffffff; }
+        #menu-full .menu-full-left ul li a {
+          text-decoration: none;
+          color: #f0eeec; }
+          #menu-full .menu-full-left ul li a:hover {
+            color: #ffffff; }
     #menu-full .menu-full-left .left-width {
       position: absolute;
       top: 0;
@@ -157,15 +160,20 @@ footer .footer-right button {
     #menu-full .menu-full-right .menu-img-container {
       max-width: 300px;
       max-height: 500px;
+      width: 300px;
+      height: 500px;
       margin: 0 auto;
       overflow: hidden;
       opacity: 0;
-      visibility: hidden; }
+      visibility: hidden;
+      position: relative; }
       #menu-full .menu-full-right .menu-img-container img {
-        width: 500px;
         height: 600px;
         object-position: 50% 50%;
-        object-fit: fill; }
+        object-fit: fill;
+        position: absolute;
+        top: 0;
+        left: 0; }
     #menu-full .menu-full-right .close-menu {
       align-self: flex-end;
       margin-right: 3rem;
@@ -173,7 +181,8 @@ footer .footer-right button {
       visibility: hidden; }
     #menu-full .menu-full-right .close-menu i {
       font-size: 3rem;
-      cursor: pointer; }
+      cursor: pointer;
+      color: black; }
 
 #wrapper-full #menu-link-open {
   position: fixed;
@@ -182,7 +191,8 @@ footer .footer-right button {
   z-index: 9999;
   cursor: pointer; }
   #wrapper-full #menu-link-open i {
-    font-size: 3rem; }
+    font-size: 3rem;
+    color: yellow; }
 
 #container-top.home {
   font-size: 1.6rem; }
