@@ -3,7 +3,6 @@ export class Menu {
     constructor() {
         this.tlMenu = gsap.timeline({ paused: true });
         this.MENU_LISTENERS = {};
-        console.log('inciiado menu');
         this.iniciarListeners();
 
     }
