@@ -36,6 +36,11 @@ body {
     margin: 0 auto;
 }
 
+.clearfix {
+    clear: both;
+    height: 0;
+}
+
 footer {
     background-color: #000000;
     .footer-content {

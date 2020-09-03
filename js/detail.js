@@ -19,7 +19,7 @@ export class Detail {
                 scrub: true
             },
             duration: 1,
-            backgroundPosition: "0% 200%"
+            backgroundPosition: "30% 200%"
         });
     }
 

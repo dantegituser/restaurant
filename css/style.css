@@ -36,6 +36,10 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
+.clearfix {
+  clear: both;
+  height: 0; }
+
 footer {
   background-color: #000000; }
   footer .footer-content {
@@ -251,6 +255,8 @@ footer .footer-right button {
         font-family: "Passion One", cursive;
         line-height: 1;
         color: #ffffff; }
+        #container-top.home .home-slider .dishes-container .dish-name-cont h2 a {
+          color: #ffffff; }
   #container-top.home .home-slider .controls-slider {
     position: absolute;
     bottom: 3rem;
@@ -369,7 +375,8 @@ footer .footer-right button {
       text-decoration: none; }
 
 #container-top.home .home-parallax {
-  background-color: cadetblue; }
+  background-color: cadetblue;
+  overflow: hidden; }
 
 #container-top.home .home-parallax .triggerScroll {
   height: 100%;
@@ -453,7 +460,10 @@ section.dish-description-section {
   left: 5vw;
   top: 45vh;
   width: 35vw;
-  height: 100%; }
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400; }
 
 #container-top.dish-detail .dish-hero h1 {
   margin-left: 5rem;
@@ -500,21 +510,102 @@ section.dish-description-section {
     grid-column: 3/6;
     grid-row: 3/4; }
 
-#container-top.dish-detail .contact-data {
+#container-top .contact-data {
   padding: 8rem 0;
   background-color: #e48686;
   position: relative;
   z-index: 40;
   background-image: url(../img/dishes/detail/bg-location-detail.png);
-  background-position: 0% -60%;
+  background-position: 30% -60%;
   background-repeat: no-repeat; }
-  #container-top.dish-detail .contact-data .small-container {
+  #container-top .contact-data .small-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; }
-    #container-top.dish-detail .contact-data .small-container p {
+    #container-top .contact-data .small-container p {
       margin-bottom: 3rem;
       color: white;
       font-family: "PT Sans Narrow", sans-serif;
       font-size: 2rem; }
+
+#container-top.category {
+  font-size: 1.6rem;
+  padding-top: 4rem; }
+
+#container-top.category .container-flex {
+  position: relative;
+  padding-bottom: 8rem; }
+
+#container-top.category .category-image {
+  width: 45%;
+  float: left;
+  position: fixed; }
+  #container-top.category .category-image .category-image-container {
+    max-width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; }
+    #container-top.category .category-image .category-image-container img {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover; }
+
+#container-top.category .container-flex .category-right {
+  width: 45%;
+  float: right; }
+  #container-top.category .container-flex .category-right h1 {
+    font-size: 6rem;
+    margin-bottom: 3rem; }
+  #container-top.category .container-flex .category-right .dishes-list {
+    list-style: none; }
+    #container-top.category .container-flex .category-right .dishes-list li {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+      cursor: pointer;
+      transition: all 1s ease; }
+      #container-top.category .container-flex .category-right .dishes-list li a {
+        color: black; }
+      #container-top.category .container-flex .category-right .dishes-list li i {
+        display: none;
+        color: #555555;
+        transition: all 1s ease; }
+      #container-top.category .container-flex .category-right .dishes-list li:hover i {
+        display: inline; }
+
+#container-top.category footer {
+  position: relative;
+  z-index: 50; }
+
+#container-top.location {
+  font-size: 1.6rem;
+  position: relative; }
+
+#container-top.location section .location-img-cont {
+  width: 100%; }
+  #container-top.location section .location-img-cont img {
+    width: 100%; }
+
+#container-top.location section.location02 .location-img-cont {
+  display: flex;
+  flex-direction: row; }
+  #container-top.location section.location02 .location-img-cont .left-location img {
+    margin-bottom: 40rem; }
+  #container-top.location section.location02 .location-img-cont .right-location {
+    margin-top: 30rem; }
+    #container-top.location section.location02 .location-img-cont .right-location img:first-child {
+      margin-bottom: 50rem; }
+
+#container-top.location section.location01 {
+  position: relative;
+  z-index: 100; }
+
+#container-top.location section.location02 {
+  position: relative;
+  z-index: 200;
+  background-color: white; }
+
+#container-top.location .cont-animation {
+  position: relative;
+  z-index: 300; }

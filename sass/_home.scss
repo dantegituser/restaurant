@@ -63,6 +63,9 @@
                 font-family: $fuente-display;
                 line-height: 1;
                 color: #ffffff;
+                a {
+                    color: #ffffff;
+                }
             }
         }
     }
@@ -212,6 +215,7 @@
 
 #container-top.home .home-parallax {
     background-color: cadetblue;
+    overflow: hidden;
 }
 
 #container-top.home .home-parallax .triggerScroll {

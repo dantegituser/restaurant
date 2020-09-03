@@ -1,0 +1,41 @@
+#container-top.location {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+#container-top.location section .location-img-cont {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+#container-top.location section.location02 .location-img-cont {
+    display: flex;
+    flex-direction: row;
+    .left-location img {
+        margin-bottom: 40rem;
+    }
+    .right-location {
+        margin-top: 30rem;
+        img:first-child {
+            margin-bottom: 50rem;
+        }
+    }
+}
+
+#container-top.location section.location01 {
+    position: relative;
+    z-index: 100;
+}
+
+#container-top.location section.location02 {
+    position: relative;
+    z-index: 200;
+    background-color: white;
+}
+
+#container-top.location .cont-animation {
+    position: relative;
+    z-index: 300;
+}
